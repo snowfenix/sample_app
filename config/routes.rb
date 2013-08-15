@@ -1,8 +1,12 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/help"
-  get "static_pages/about"
-  get "static_pages/contact"
+  get "users/new" # to be supress
+
+  match '/signup',  to: 'users#new',            via: 'get'
+  root 'static_pages#home' # route to the home page i.e. '/' <=> match '/', to: 'static_pages#home', via: 'get'. 
+                           # static_pages#home = the action home in the controller static_pages. creates root_path and root_url
+  match '/help',    to: 'static_pages#help',    via: 'get' # creates the named root help_path for '/' and help_url for the full url
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
