@@ -1,8 +1,8 @@
 GIT
-  remote: git://github.com/sporkrb/spork-rails.git
-  revision: 3224f84d8c31fcb0894e9a43f6c3ac67e3aa0d71
+  remote: https://github.com/sporkrb/spork-rails.git
+  revision: 0dd45e59d3237b4c8f9efc215b46d9c07072a95e
   specs:
-    spork-rails (3.2.1)
+    spork-rails (4.0.0)
       rails (>= 3.0.0, < 5)
       spork (>= 1.0rc0)
 
@@ -54,6 +54,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    concurrent-ruby (1.1.9)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -74,7 +75,8 @@ GEM
       guard (>= 1.1)
       spork (>= 0.8.4)
     hike (1.2.3)
-    i18n (0.6.4)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     jbuilder (1.0.2)
       activesupport (>= 3.0.0)
     jquery-rails (2.2.1)
